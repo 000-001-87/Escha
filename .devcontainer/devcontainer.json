@@ -1,0 +1,22 @@
+{
+  "name": "C Development Environment",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/gcc:1": {},
+    "ghcr.io/devcontainers/features/make:1": {},
+    "ghcr.io/devcontainers/features/pkg-config:1": {},
+    "ghcr.io/devcontainers/features/cmake:1": {}
+  },
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y gdb valgrind",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools"
+      ]
+    }
+  }
+}
